@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="topzme.couseandroid.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi TOPz"
+                android:textColor="#4e9ae1"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                android:visibility="gone" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editTextHello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/copyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copy"
+                android:visibility="gone" />
+
+
+            <!--Start Coding Here-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextNumberOne"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" + " />
+
+                <EditText
+                    android:id="@+id/editTextNumberTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="true"
+                    android:text="= 0" />
+
+            </LinearLayout>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/calculateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#7ab800"
+                fancy:fb_focusColor="#9bd823"
+                fancy:fb_fontIconResource="&#xf04b;"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="SHUFFLE PLAY"
+                fancy:fb_textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/text_checkbox" />
+
+
+            <RadioGroup
+                android:id="@+id/groupCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/plus"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/radio_button_margin_left"
+                    android:text="+" />
+
+                <RadioButton
+                    android:id="@+id/minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/radio_button_margin_left"
+                    android:text="-" />
+
+                <RadioButton
+                    android:id="@+id/multiply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/radio_button_margin_left"
+                    android:text="*" />
+
+                <RadioButton
+                    android:id="@+id/divide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/radio_button_margin_left"
+                    android:text="%" />
+
+
+            </RadioGroup>
+
+            <ProgressBar
+                style="@style/ProgressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/sample_bar" />
+
+            <topzme.couseandroid.CustomViewGroup
+                android:id="@+id/viewgroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <topzme.couseandroid.CustomViewGroup
+                android:id="@+id/viewgroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <topzme.couseandroid.CustomView
+                android:id="@+id/customView1"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+            <topzme.couseandroid.CustomView
+                android:id="@+id/customView2"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:isBlue="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000000">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/selector_btn_default"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

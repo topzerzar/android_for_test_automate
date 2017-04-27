@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CouseAndroid</string>
+    <string name="calculate">Calculate</string>
+    <string name="text_checkbox">i agree</string>
+</resources>
